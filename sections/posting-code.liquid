@@ -2,7 +2,7 @@
 <div class="container-fluid">
   <div class="outer-section">
     <div class="ineer-image">
-      
+      {{  }}
     </div>
     <div class="inner-content">
       
@@ -13,7 +13,15 @@
 {% schema %}
   {
     "name": "Posting",
-    "settings": [],
+    "settings": [
+      {
+              "type":"image_picker",
+        "id":"image_box",
+      "label":"Image",
+      "info":"Pick your image"
+      }
+
+    ],
     "presets": [{
       "name": "Posting"
     }]
