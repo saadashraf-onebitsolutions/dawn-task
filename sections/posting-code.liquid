@@ -52,7 +52,6 @@
     <div class="inner-image">
       {{ section.settings.image_box | img_url: '', scale: 2 | img_tag: section.settings.image_box.alt }}
     </div>
-    <!-- <div class="inner-content" {% if section.settings.text_style == 'top' %} style="justify-content: flex-start;" {% else if section.settings.text_style == 'middle' %} style="justify-content: center;" {% else if section.settings.text_style == 'end' %} style="justify-content: flex-end;" {% else %} style="justify-content: center;" {% endif %}> -->
      <div class="inner-content" style="justify-content:{{ section.settings.text_style }}">
     {% render 'rating' %}
       <h2>This is My Heading 2</h2>
