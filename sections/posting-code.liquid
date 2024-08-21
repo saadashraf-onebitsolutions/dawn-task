@@ -1,31 +1,58 @@
 {% style %}
-  .outer-section{
-    max-width:100%;
-    width:90%;
-    margin:0 auto;
-    display:flex;
-    flex-direction:row;
+  .outer-section {
+    max-width: 100%;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 20px; /* Added gap for better spacing */
   }
-  .inner-image,.inner-content{
-    width:50%;
+  .inner-image, .inner-content {
+    width: 50%;
   }
-  .inner-content{
-    padding:20px;
-    display:flex;
-    flex-direction:column;
+  .inner-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Default alignment */
+    background-color: #f9f9f9; /* Light background for better contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   }
-  .inner-image img{
-    width:100%;
-    height:auto;
-    object-fit:contain;
+  .inner-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px; /* Rounded corners for the image */
+  }
+  .inner-content h2 {
+    margin-bottom: 10px;
+    color: #333; /* Darker text for heading */
+  }
+  .inner-content p {
+    margin-bottom: 20px;
+    color: #666; /* Lighter text for paragraph */
+  }
+  .inner-content button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue background for button */
+    color: #fff; /* White text for button */
+    border: none;
+    border-radius: 4px; /* Rounded corners for button */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+  }
+  .inner-content button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
   }
 {% endstyle %}
+
 <div class="container-fluid">
   <div class="outer-section">
     <div class="inner-image">
-       {{ section.settings.image_box | img_url: '', scale: 2 | img_tag: section.settings.image_box.alt }}
+      {{ section.settings.image_box | img_url: '', scale: 2 | img_tag: section.settings.image_box.alt }}
     </div>
-<div class="inner-content" {% if section.settings.text_style == 'top' %} style="justify-content: flex-start;" {% else if section.settings.text_style == 'middle' %} style="justify-content: center;" {% else if section.settings.text_style == 'end' %} style="justify-content: end;" {% else %} style="justify-content: end;" {% endif %}>
+    <div class="inner-content" {% if section.settings.text_style == 'top' %} style="justify-content: flex-start;" {% else if section.settings.text_style == 'middle' %} style="justify-content: center;" {% else if section.settings.text_style == 'end' %} style="justify-content: flex-end;" {% else %} style="justify-content: center;" {% endif %}>
       {% render 'rating' %}
       <h2>This is My Heading 2</h2>
       <p>This is a sample paragraph. You can add more details here about your content or offer additional information that complements the heading above. This text provides context or elaborates on the content presented.</p>
@@ -39,35 +66,36 @@
     "name": "Posting",
     "settings": [
       {
-              "type":"image_picker",
-        "id":"image_box",
-      "label":"Image",
-      "info":"Pick your image"
+        "type": "image_picker",
+        "id": "image_box",
+        "label": "Image",
+        "info": "Pick your image"
       },
-       {
-          "type": "select",
-          "id": "text_style",
-          "options": [
-            {
-              "value": "top",
-              "label": "Top align"
-            },
-            {
-              "value": "middle",
-              "label": "Middle Align"
-            },
-            {
-              "value": "end",
-              "label": "End Align"
-            }
-          ],
-          "default": "top",
-          "label": "Top align"
-        },
-
+      {
+        "type": "select",
+        "id": "text_style",
+        "options": [
+          {
+            "value": "top",
+            "label": "Top align"
+          },
+          {
+            "value": "middle",
+            "label": "Middle Align"
+          },
+          {
+            "value": "end",
+            "label": "End Align"
+          }
+        ],
+        "default": "top",
+        "label": "Text Alignment"
+      }
     ],
-    "presets": [{
-      "name": "Posting"
-    }]
+    "presets": [
+      {
+        "name": "Posting"
+      }
+    ]
   }
 {% endschema %}
