@@ -25,7 +25,7 @@
     <div class="inner-image">
        {{ section.settings.image_box | img_url: '', scale: 2 | img_tag: section.settings.image_box.alt }}
     </div>
-    <div class="inner-content" {% if section.settings.text_style == 'top' %} style="justify-content:start;" {% else if  section.settings.text_style == 'middle' %} style="justify-content:center;"  {% else if  section.settings.text_style == 'end' %} style="justify-content:end;" {% else %} <p>null</p>  {% endif %}>
+<div class="inner-content" {% if section.settings.text_style == 'top' %} style="justify-content: flex-start;" {% else if section.settings.text_style == 'middle' %} style="justify-content: center;" {% else if section.settings.text_style == 'end' %} style="justify-content: flex-end;" {% else %} style="justify-content: center;" {% endif %}>
       {% render 'rating' %}
       <h2>This is My Heading 2</h2>
       <p>This is a sample paragraph. You can add more details here about your content or offer additional information that complements the heading above. This text provides context or elaborates on the content presented.</p>
