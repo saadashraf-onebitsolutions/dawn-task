@@ -1,6 +1,12 @@
 {% assign x = "Pack 10" %}
 {% if x contains "P" %}
-  <p>THis is pack 10</p>
+  <p>This is pack 10</p>
+  {% else %}
+  <p>This is pack 5</p>
+{% endif %}
+
+{% if x == "P" %}
+  <p>This is pack 10</p>
   {% else %}
   <p>This is pack 5</p>
 {% endif %}
