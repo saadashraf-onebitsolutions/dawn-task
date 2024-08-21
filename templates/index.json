@@ -52,14 +52,16 @@
       "type": "posting-code",
       "settings": {
         "image_box": "shopify:\/\/shop_images\/a_wCaT_3.png",
-        "text_style": "center"
+        "text_style": "center",
+        "bg-color": "#242833"
       }
     },
     "posting_code_EzzQDE": {
       "type": "posting-code",
       "settings": {
         "image_box": "shopify:\/\/shop_images\/a_wCaT_3.png",
-        "text_style": "start"
+        "text_style": "start",
+        "bg-color": ""
       }
     },
     "featured_collection": {
