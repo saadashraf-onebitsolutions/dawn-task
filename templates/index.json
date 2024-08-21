@@ -55,6 +55,13 @@
         "text_style": "center"
       }
     },
+    "posting_code_EzzQDE": {
+      "type": "posting-code",
+      "settings": {
+        "image_box": "shopify:\/\/shop_images\/a_wCaT_3.png",
+        "text_style": "start"
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -87,6 +94,7 @@
   "order": [
     "image_banner",
     "posting_code_eDjLQA",
+    "posting_code_EzzQDE",
     "featured_collection"
   ]
 }
