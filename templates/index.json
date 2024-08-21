@@ -52,7 +52,7 @@
       "type": "posting-code",
       "settings": {
         "image_box": "shopify:\/\/shop_images\/a_wCaT_3.png",
-        "text_style": "end"
+        "text_style": "start"
       }
     },
     "featured_collection": {
