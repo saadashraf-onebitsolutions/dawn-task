@@ -53,7 +53,7 @@
   }
 {% endstyle %}
 
-<div class="container-fluid" style="background-color:{{ section.settings.bg-color }}">
+<div class="container-fluid" style="background-color:{{ section.settings.bg-color }}; color:{{ section.settings.text-color }}">
   <div class="outer-section">
     <div class="inner-image">
       {{ section.settings.image_box | img_url: '', scale: 2 | img_tag: section.settings.image_box.alt }}
@@ -102,6 +102,12 @@
         "type": "color",
         "id": "bg-color",
         "label": "Background Color",
+        "info": "Pick your Color"
+      },
+       {
+        "type": "color",
+        "id": "text-color",
+        "label": "Text Color",
         "info": "Pick your Color"
       },
     ],
