@@ -51,7 +51,8 @@
     "posting_code_eDjLQA": {
       "type": "posting-code",
       "settings": {
-        "image_box": "shopify:\/\/shop_images\/a_wCaT_3.png"
+        "image_box": "shopify:\/\/shop_images\/a_wCaT_3.png",
+        "text_style": "end"
       }
     },
     "featured_collection": {
