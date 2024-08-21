@@ -41,6 +41,7 @@
   .inner-content button:hover {
     background-color: #0056b3; /* Darker blue on hover */
   }
+  
   @media (max-width: 700px){
     .outer-section {
     flex-direction: column;
@@ -52,7 +53,7 @@
   }
 {% endstyle %}
 
-<div class="container-fluid">
+<div class="container-fluid" style="background-color:{{ section.settings.bg_color }}">
   <div class="outer-section">
     <div class="inner-image">
       {{ section.settings.image_box | img_url: '', scale: 2 | img_tag: section.settings.image_box.alt }}
@@ -96,7 +97,13 @@
         ],
         "default": "start",
         "label": "Text Alignment"
-      }
+      },
+       {
+        "type": "color",
+        "id": "bg-color",
+        "label": "Background Color",
+        "info": "Pick your Color"
+      },
     ],
     "presets": [
       {
